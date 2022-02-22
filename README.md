@@ -18,9 +18,10 @@ We've largely been using R Notebooks for coding, which is fine for tutorials and
      - iteratively begin moving your code to this file, beginning with library() declarations
      - comment like it's going out of style
      - test frequently! (move a little, test, move a little, test, etc.)
-3. Create README.md files in `output` and `data`
+3. Create README.md files in `src`, `output` and `data`
    - this will allow you to push them to your repo (empty directories can't be pushed)
    - add some very basic markdown to each
+   - having a README in each directory will make your GitHub repository more friendly and informative
 4. (Optonal, yet recommended!) In `src` create a file called functions.R
      - create any custom functions of common tasks from main.R in functions.R
      - near the top of main.R, use `source("src/functions.R") to make the custom functions available
