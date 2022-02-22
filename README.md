@@ -23,6 +23,9 @@ We've largely been using R Notebooks for coding, which is fine for tutorials and
      - create any custom functions of common tasks from main.R in functions.R
      - near the top of main.R, use `source("src/functions.R") to make the custom functions available
      - comment like crazy, so future users of your code understand what's happening
-5. Use the main README.md to create your SSA (Species Status Assessment). Refer to markdown syntax to create a decent looking document. (Note: this is something one teammate could work on while another is doing coding steps above, since they are different files).
+5. Use the main README.md to create your SSA (Species Status Assessment). Refer to (markdown syntax)[https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax] to create a decent looking document. (Note: this is something one teammate could work on while another is doing coding steps above, since they are different files).
    
-  
+
+### Looking ahead
+
+Once you've migrated your code into this structure, it doesn't mean you can't use Notebook files anymore. They're actually pretty code for writing and testing new code. You might try using one for each new topic, or perhaps use a new .R file for a new topic, before migrating the working code to main.R. There's no perfect answer - discuss with your group what everyone is comfortable with, and go from there.
