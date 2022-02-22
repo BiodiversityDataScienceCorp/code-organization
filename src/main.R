@@ -34,12 +34,13 @@ goldFinches
 
 # add code here to clean data
 # consider writing/using custom functions
-
+# save csv in data directory
 
 
 
 ################ create species distribution map ##############
 
 # add code here to create maps
+# save map jpg in output directory
 
 
