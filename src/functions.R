@@ -6,33 +6,14 @@
 # list reusable functions below
 
 
-queryGbif<-function(species, options, limit){
+basicGbifQuery<-function(species, limit){
+  #make query
+  data<-occ(query=species, from="gbif", limit=limit)
   
-  query<-occ(query=species, from="gbif", gbifopts = options, limit=limit)
-  obj<-query$gbif$data
-  prop<-attributes(obj)
-  data<-obj$attributes(prop)
+  #traverse object
+  obj<-data$gbif$data
   
-  
-  
-  # return is super important it - it sends the result back to the code that called the function
-  return (data)
+  #return to calling code
+  return (obj)
 
 }
-
-# data cleaning functions
-
-removeAbsent<- function(data){
-  # get subset of data in which occurrenceStatus isn't PRESENT
-  absent<-subset(x=data, occurrenceStatus !="PRESENT")
-  # Now we use "anti_join" to redefine our data set by subtracting the "absent" rows from it.
-  data<-anti_join(data, absent)
-  
-  return(data)
-
-
-}
-
-
-
-

@@ -1,30 +1,45 @@
+# Jeremy McWilliams
+# Lewis & Clark College
 
-# this is our main file, that uses "source" to include other files
 
 # load libraries below:
 library("spocc")
 library("tidyverse")
+library("sp")
+library("raster")
+library("maptools")
+library("rgdal")
+library("dismo")
+
 
 # Note: the path is from the current working directory, NOT relative to this file
+# You can run getwd() in the console to confirm the working directory
+
 # loads the contents of functions.R, makes functions ready to use
 source("src/functions.R")
 
 
+########### querying species occurrence data from gbif #################
+
 species<-"Spinus tristis"
-myOpts<-list(stateProvince="Oregon", year="2020")
-limit<-2000
+limit<-200
 
-# calls function defined in functions.R
-gfData<-queryGbif(species, myOpts, limit)
+obj<-basicGbifQuery(species, limit)
 
-gfData
-
-# calls function in functions.R to remove 'absent' rows
-#gfData<-removeAbsent(gfData$Spinus_tristis)
-#gfData
-
-show(gfData)
+goldFinches<-obj$Spinus_tristis
+goldFinches
 
 
-x<-attributes(gfData)
-x
+################### cleaning data #####################
+
+# add code here to clean data
+# consider writing/using custom functions
+
+
+
+
+################ create species distribution map ##############
+
+# add code here to create maps
+
+
