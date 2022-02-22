@@ -5,6 +5,8 @@ Repository for showing "good enough" practices for code organization
 This repository provides a model for code structure, based upon [Good enough practices in scientific computing, by Wilson et. al](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510).
 
 
+### To do, before next class (March 1st, 2022)
+
 We've largely been using R Notebooks for coding, which is fine for tutorials and such, but probably isn't the best for sharing and reproducability. Looking ahead toward a final product, we should restructure things by doing the following:
 
 1. Create the following directories:  
